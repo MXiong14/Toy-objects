@@ -41,11 +41,38 @@ const cars = [
 }
 ]
 
-const carToFind = 2
+const civic = {
+    name: "Civic",
+    maker: "Hot Wheel",
+    price: 1.68,
+    weight: 1.1,
+    length: 1.2
+}
+
+
+const addCarToInventory = (carObject) => {
+    const lastIndex = cars.length -1
+    const currentLastCar = cars[lastIndex]
+    const maxId = currentLastCar.id
+    const idForNewCar = maxId +1
+
+    carObject.id = idForNewCar
+    cars.push(carObject)
+}
+
+addCarToInventory(civic)
+
+for (const car of cars) {
+    console.log(`The ${car.maker} ${car.name} weighs ${car.weight} pounds. It now cost ${car.price} dollars.`)
+}
+
+
+
+/*const carToFind =2
 
 for (const car of cars) {
     if (car.id === carToFind) {
     car.price = car.price + 0.05
     console.log(`The ${car.maker} ${car.name} weighs ${car.weight} pounds. It now cost ${car.price} dollars.`)
 }
-}
+}*/
