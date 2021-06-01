@@ -41,8 +41,11 @@ const cars = [
 }
 ]
 
-for (const _car of cars) {
-    _car.price = _car.price + 0.05
-    console.log(`The ${_car.maker} ${_car.name} weighs ${_car.weight} pounds. It now cost ${_car.price} dollars.`)
-}
+const carToFind = 2
 
+for (const car of cars) {
+    if (car.id === carToFind) {
+    car.price = car.price + 0.05
+    console.log(`The ${car.maker} ${car.name} weighs ${car.weight} pounds. It now cost ${car.price} dollars.`)
+}
+}
