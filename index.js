@@ -1,5 +1,5 @@
 const cars = [
-    {
+{
     id: 1,
     name: "Supra",
     maker: "HotWheel",
@@ -25,5 +25,8 @@ const cars = [
 }
 ]
 
-console.log(cars)
+for (const car of cars) {
+console.log(car.name)
+}
+
 
